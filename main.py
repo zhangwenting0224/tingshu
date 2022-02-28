@@ -62,7 +62,7 @@ class AudioServer:
                 out, err = p.communicate()
 
                 # 获取音频信息
-                infos = out.decode('utf-8').split('\r\n')
+                infos = out.decode('utf-8', 'ignore').split('\r\n')
                 infos = [i.replace(' ', '') for i in infos]
 
                 # 获取音频时长
